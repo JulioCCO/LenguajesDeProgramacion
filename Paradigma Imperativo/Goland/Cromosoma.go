@@ -1,4 +1,4 @@
-package cromosoma
+package main
 
 import (
 	"fmt"

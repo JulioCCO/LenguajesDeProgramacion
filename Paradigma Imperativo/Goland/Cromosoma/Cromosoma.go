@@ -4,11 +4,6 @@ import (
 	"fmt"
 )
 
-/**
-1- Crear un repositorio en GIT publico
-2- Pasar el repositorio, direccion del repo la profesor
-*/
-
 type persona struct {
 	nombre    string
 	apellido  string

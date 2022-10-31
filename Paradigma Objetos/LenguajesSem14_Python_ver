@@ -21,7 +21,6 @@ class OP():
     def getOP(self):
         return self.OP
 
-texto="256*25c34+123"
 
 def token(text):
     newtext=""
@@ -41,11 +40,9 @@ def listar(text):
             try:
                 n=numero(objeto)
                 lista.append(n)
-                print("añadio N")
             except ValueError:
                 o=OP(objeto)
                 lista.append(o)
-                print("añadio O")
             objeto=""
         else:
             objeto=objeto+element
@@ -64,9 +61,7 @@ def validaformato(lista):
     newlista=[]
     turno=0
     for l in lista:
-        
         try:
-            
             l.getNumero()
             if turno ==0:
                 newlista.append(l)
@@ -74,24 +69,21 @@ def validaformato(lista):
             else:
                 print("Error de formato")
         except AttributeError:
-            
             if turno ==1:    
                 l.getOP()
                 newlista.append(l)
                 turno=0
             else:
                 print("Error de formato")
-
     return newlista
     
 
-def resultado(lista):#imcompleto
+def resultado(lista):
     a=0
     b=0
     s=""
     turno=0
     for element in lista:
-        print(turno)
         if turno==0:
             a=element.getNumero()
         elif(turno==1):
@@ -106,8 +98,6 @@ def resultado(lista):#imcompleto
                 a=a*b
             elif(s=="/"):
                 a=a/b
-
-
             turno=0
         turno=turno+1
     return a
